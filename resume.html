@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumithra Resume</title>
+</head>
+
+<body>
+    <h3>Inspect the page and go to console to view my resume in JSON format </h3>
+    <script>
+        let resume = {
+            first_name: "Sumithra",
+            last_name: "Nagarajan",
+            age: 26,
+            email: "yesiamsumithra@gmail.com",
+            contact: "+918220297167",
+            nationality: "Indian",
+            skills: ["HTML", "CSS", "JS", "JSON"],
+            languages_known: ["Tamil", "English", "Hindi"],
+            education: [
+                {
+                    class10_school_name: "SLMS",
+                    year: 2013,
+                    percentage: "96%"
+
+                },
+                {
+                    class12_school_name: "SVV",
+                    year: 2015,
+                    percentage: "90.08%"
+
+
+                },
+                {
+                    college_name: "Karpagam",
+                    from: 2015,
+                    to: 2019,
+                    percentage: "86%"
+                }
+            ],
+            companies:
+            {
+                name: "CTS",
+                from: 2019,
+                to: 2024
+            }
+        }
+        let loopStop = 1;
+        for (let i = 0; i < loopStop; i++) {
+            if (resume.companies.name == "CTS" && resume.nationality == "Indian") {
+                console.log(resume.education)
+            }
+        }
+        Object.keys(resume).forEach(key => {
+            if(resume.first_name=="Sumithra"){
+            console.log(key, resume[key]);
+            }
+        });
+    </script>
+</body>
+
+</html>
